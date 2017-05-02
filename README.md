@@ -1,2 +1,3 @@
 # Git-Workshop
-Kharazmi University
+Kharazmi University Git Workshop on 1 May 2017
+
