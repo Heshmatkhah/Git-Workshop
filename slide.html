@@ -1,0 +1,1659 @@
+<!-- saved from url=(0060)http://strut.io/editor/preview_export/impress.html#/overview -->
+<html style="height: 100%;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Git Workshop</title>
+
+	<meta name="description" content="TODO">
+	<meta name="author" content="TODO">
+
+	<style>
+		.componentContainer {
+			position: absolute;
+			line-height: normal;
+			/*-webkit-transform-origin: 135% 135%;
+			-moz-transform-origin: 135% 135%;
+			transform-origin: 135% 135%;*/
+		}
+
+		.transformContainer {
+			-webkit-transform-origin: 0 0;
+			-moz-transform-origin: 0 0;
+			transform-origin: 0 0;
+		}
+
+		.bg {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+
+	<link rel="stylesheet" href="style/default-reset.css">
+	<link href="style/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style/default.css" id="theme">
+	<link href="style/web-fonts.css" rel="stylesheet" type="text/css">
+	<link href="style/backgroundClasses.css" rel="stylesheet" type="text/css">
+	<link href="style/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+	<link rel="shortcut icon" href="http://strut.io/editor/preview_export/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="http://strut.io/editor/preview_export/apple-touch-icon.png" type="image/png">
+
+	<style>
+		.reveal.themedArea {
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+	<style type="text/css">
+		/*.example {
+			border: 4px groove orange;
+		}*/
+
+		.strut-surface .terminal-window {
+			text-align: left;
+			width: 90%;
+			height: 50%;
+			min-height: 400px !important;
+			border-radius: 10px;
+			margin: 6em auto auto;
+			position: relative;
+		}
+
+		.strut-surface .terminal-window header {
+			background: #E0E8F0;
+			height: 30px;
+			border-radius: 8px 8px 0 0;
+			padding-left: 10px;
+			font-size: 16px;
+		}
+
+		.strut-surface .terminal-window header .button {
+			width: 12px;
+			height: 12px;
+			margin: 10px 4px 0 0;
+			display: inline-block;
+			border-radius: 8px;
+		}
+
+		.strut-surface .terminal-window header .button.green {
+			background: #3BB662;
+		}
+
+		.strut-surface .terminal-window header .button.yellow {
+			background: #E5C30F;
+		}
+
+		.strut-surface .terminal-window header .button.red {
+			background: #E75448;
+		}
+
+		.strut-surface .terminal-window section.terminal {
+			color: white;
+			font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+			font-size: 18pt;
+			background: #30353A;
+			padding: 10px;
+			box-sizing: border-box;
+			position: absolute;
+			width: 100%;
+			top: 30px;
+			bottom: 0;
+			overflow: auto;
+			line-height: 30px;
+		}
+
+		.strut-surface .terminal-window section.terminal .typed-cursor {
+			opacity: 1;
+			-webkit-animation: blink 1s infinite;
+			-moz-animation: blink 1s infinite;
+			animation: blink 1s infinite;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@-webkit-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@-moz-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.strut-surface .terminal-window a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.strut-surface .terminal-window a:hover {
+			color: inherit;
+			text-decoration: underline;
+		}
+	</style>
+
+	<link rel="stylesheet" href="style/Items.css">
+
+	<script type="text/javascript" src="js/impress.js"></script>
+
+	<script src="js/onready.js"></script>
+	<script src="js/loadPresentation.js"></script>
+	<script>
+		ready(function () {
+			if (document.getElementById('launched-placeholder'))
+				loadPresentation();
+
+			if (!window.presStarted) {
+				startPres(document, window);
+				impress().init();
+			}
+
+			if ("ontouchstart" in document.documentElement) {
+				document.querySelector(".hint").innerHTML =
+					"<p>Tap on the left or right to navigate</p>";
+			}
+		});
+	</script>
+</head>
+<body class="impress-not-supported impress-enabled" style="height: 100%; overflow: hidden;">
+
+<div class="fallback-message">
+	<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg bg-default strut-surface">
+	<div class="bg innerBg strut-slide-overview">
+		<!--<div class="hint">-->
+			<!--<p>Use a spacebar or arrow keys to navigate</p>-->
+		<!--</div>-->
+
+		<div id="impress">
+			<div id="container">
+
+				<div class="step past" data-state="strut-slide-0" data-x="38530" data-y="24760" data-rotate-x="30" data-rotate-y="30" data-rotate-z="30" data-z="1000" data-scale="8" id="start">
+					<div class="slideContainer strut-slide-0">
+						<div class="themedArea">
+
+						</div>
+
+
+						<div class="componentContainer " style="top: 81px; left: 15px; width: 473px; height: 197px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.52, 0.52); -moz-transform: scale(0.52, 0.52);transform: scale(0.52, 0.52)">
+								<img src="img/logo/Git-Logo-2Color.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 298px; left: 462px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									&amp;
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 28px; left: 750px;width: 91px; height: 92px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.04, 0.04); -moz-transform: scale(0.04, 0.04);transform: scale(0.04, 0.04)">
+								<img src="img/logo/CESSA-Logo.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 20px; left: 880px;width: 83px; height: 1078px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.04, 0.04); -moz-transform: scale(0.04, 0.04); transform: scale(0.04, 0.04)">
+								<img src="img/logo/Kharazmi.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 150px; left: 730px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div style="font-size: 20px;">
+									Mohammad Amir Heshmatkhah
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 490px; left: 428px;width: 621px; height: 255px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.62, 0.62); -moz-transform: scale(0.62, 0.62); transform: scale(0.62, 0.62)">
+								<img src="img/logo/GitHub_name.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 525px; left: 248px;width: 185px; height: 185px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.54, 1.54); -moz-transform: scale(1.54, 1.54); transform: scale(1.54, 1.54)">
+								<img src="img/logo/GitHub-Mark.png">
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-1" data-x="26230" data-y="21412" data-scale="3" id="what-is-vcs-0">
+					<div class="slideContainer strut-slide-1">
+
+						<div class="componentContainer " style="top: 327px; left: 27px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-96">
+									What is version control
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-2" data-x="29700" data-y="18647" data-scale="3" id="what-is-vcs-1">
+					<div class="slideContainer strut-slide-2">
+
+						<div class="componentContainer " style="top: 298px; left: 67px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									help to track changes make in your code over time<br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-3" data-x="33245" data-y="15730" data-scale="3" id="what-is-vcs-2">
+					<div class="slideContainer strut-slide-3">
+
+						<div class="componentContainer " style="top: 298px; left: -22px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									We tell the version control system to take a snapshot of files.
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-4" data-x="25995" data-y="3410" data-z="150" data-scale="5" id="benefits-0">
+					<div class="slideContainer strut-slide-4">
+
+						<div class="componentContainer " style="top: 276px; left: 186px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-200">
+									Benefits
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-5" data-x="31540" data-y="3150" data-rotate-x="45" data-z="-200" data-scale="3" id="benefits-1">
+					<div class="slideContainer strut-slide-5">
+
+						<div class="componentContainer " style="top: 340px; left: 355px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Create Workflows
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 220px; left: 70px;width: 256px; height: 256px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/create_workflows_125x.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-6" data-x="31350" data-y="7755" data-rotate-x="45" data-rotate-y="-5" data-rotate-z="45" data-z="-300" data-scale="3" id="benefits-2">
+					<div class="slideContainer strut-slide-6">
+
+						<div class="componentContainer " style="top: 220px; left: 70px;width: 256px; height: 256px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/work_with_revivions_125x.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 340px; left: 355px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Work With Versions
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-7" data-x="26700" data-y="8925" data-rotate-x="45" data-rotate-z="90" data-z="-250" data-scale="3" id="benefits-3">
+					<div class="slideContainer strut-slide-7">
+
+						<div class="componentContainer " style="top: 340px; left: 355px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Code Together
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 220px; left: 70px;width: 256px; height: 256px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/code_together_125x.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-8" data-x="21400" data-y="7910" data-rotate-x="45" data-rotate-z="120" data-z="-250" data-scale="3" id="benefits-4">
+					<div class="slideContainer strut-slide-8">
+
+						<div class="componentContainer " style="top: 340px; left: 355px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									History
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 220px; left: 70px;width: 256px; height: 256px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/keep_a_history_125x.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-9" data-x="20275" data-y="3350" data-rotate-x="45" data-rotate-z="180" data-z="-250" data-scale="3" id="benefits-5">
+					<div class="slideContainer strut-slide-9">
+
+						<div class="componentContainer " style="top: 340px; left: 355px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Automation
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 220px; left: 70px;width: 256px; height: 256px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/automate_tasks_125x.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-10" data-x="13410" data-y="3410" data-rotate-y="45" data-rotate-z="90" data-scale="3" id="vcs-list">
+					<div class="slideContainer strut-slide-10">
+
+						<div class="componentContainer " style="top: 46px; left: 67px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									<ul>
+										<li>SVN</li>
+										<li>BitKeeper<br></li>
+										<li>Git</li>
+										<li>Team Foundation</li>
+										<li>Mercurial&nbsp;</li>
+										<li>Perforce</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer" style="top: 466px; left: 452px; width: 157px; height: 94px;">
+							<div class="transformContainer">
+								<img src="img/logo/Subversion_Logo.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 584px; left: 31px; -webkit-transform: rotate(0.13rad)  ; -moz-transform: rotate(0.13rad)  ; transform: rotate(0.13rad)  ; width: 450px; height: 116.67px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.67, 1.67); -moz-transform: scale(1.67, 1.67); transform: scale(1.67, 1.67)">
+								<img src="img/logo/Bitkeeper-logo.png">
+							</div>
+						</div>
+
+						<div class="componentContainer" style="top: 353px; left: 756px; width: 100px; height: 120px;">
+							<div class="transformContainer">
+								<img src="img/logo/New_Mercurial_logo.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 80px; left: 551px; -webkit-transform: rotate(0.46rad)  ; -moz-transform: rotate(0.46rad)  ; transform: rotate(0.46rad)  ; ">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<img src="img/logo/MS-TFS.png">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 551px; left: 526px; -webkit-transform: rotate(-0.36rad)  ; -moz-transform: rotate(-0.36rad)  ; transform: rotate(-0.36rad)  ; width: 469px; height: 107.84px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.3, 0.3); -moz-transform: scale(0.3, 0.3); transform: scale(0.3, 0.3)">
+								<img src="img/logo/perforce.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-11" data-x="7730" data-y="8355" data-rotate-y="90" data-rotate-z="180" data-scale="3" id="vcs-stat-1">
+					<div class="slideContainer strut-slide-11">
+
+						<div class="componentContainer " style="top: 83px; left: 58px;width: 909px; height: 601.83px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.14, 1.14); -moz-transform: scale(1.14, 1.14); transform: scale(1.14, 1.14)">
+								<img src="img/vcs.png">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 549px; left: 786px; -webkit-transform: rotate(-0.67rad)  ; -moz-transform: rotate(-0.67rad)  ; transform: rotate(-0.67rad)  ; ">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									2015
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-12" data-x="5625" data-y="12595" data-rotate-y="90" data-rotate-z="180" data-scale="3" id="vcs-stat-2">
+					<div class="slideContainer strut-slide-12">
+
+						<div class="componentContainer " style="top: 79px; left: 63px;width: 898px; height: 611.16px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.29, 1.29); -moz-transform: scale(1.29, 1.29); transform: scale(1.29, 1.29)">
+								<img src="img/vcs2.png">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 561px; left: 782px; -webkit-transform: rotate(-0.63rad)  ; -moz-transform: rotate(-0.63rad)  ; transform: rotate(-0.63rad)  ; ">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									2017
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-13" data-x="9750" data-y="17065" data-scale="4" id="history-0">
+					<div class="slideContainer strut-slide-13">
+
+						<div class="componentContainer " style="top: 298px; left: 275px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									History
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-14" data-x="15155" data-y="15025" data-scale="3" id="history-1">
+					<div class="slideContainer strut-slide-14">
+
+						<div class="componentContainer " style="top: 5px; left: 191px;width: 820px; height: 461.25px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.43, 0.43); -moz-transform: scale(0.43, 0.43); transform: scale(0.43, 0.43)">
+								<img src="img/linus-torvald.png">
+							</div>
+						</div>
+
+						<!--<div class="componentContainer " style="top: 465px; left: 499px;">-->
+							<!--<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">-->
+								<!--<div class="text-48">-->
+									<!--Linus Torvalds<br>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+
+						<div class="componentContainer "
+						     style="top: 601px; left: 98px; ">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Start in 2005<br>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="componentContainer "
+						     style="top: 540px; left: 560px; -webkit-transform: rotate(-20deg)  ; -moz-transform: rotate(-20deg)  ; transform: rotate(-20deg)  ; width: 450px; height: 116.67px;">
+
+							<div class="transformContainer" style="-webkit-transform: scale(1.67, 1.67); -moz-transform: scale(1.67, 1.67); transform: scale(1.67, 1.67)">
+								<img src="img/logo/Bitkeeper-logo.png">
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-15" data-x="19865" data-y="16775" data-scale="3" id="history-2">
+					<div class="slideContainer strut-slide-16">
+
+						<div class="componentContainer " style="top: 341px; left: 69px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									To aid in kernel development
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-16" data-x="24970" data-y="13715" data-scale="3" id="history-3">
+					<div class="slideContainer strut-slide-15">
+
+						<div class="componentContainer " style="top: 341px; left: -25px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Distributed version control system
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-17" data-x="41030" data-y="4345" data-rotate-x="45" data-z="150" data-scale="7" id="basics-0">
+					<div class="slideContainer strut-slide-17">
+
+						<div class="componentContainer " style="top: 298px; left: 202px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									Git Basics<br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-18" data-x="45780" data-y="8035" data-rotate-x="45" data-rotate-y="45" data-rotate-z="10" data-z="250" data-scale="3" id="basics-1">
+					<div class="slideContainer strut-slide-18">
+
+						<div class="componentContainer " style="top: 14px; left: 17px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Snapshots, Version, Commit
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 109px; left: 112px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<img src="img/deltas.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 424px; left: 112px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<img src="img/snapshots.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-19" data-x="48580" data-y="10905" data-rotate-x="45" data-rotate-y="45" data-rotate-z="10" data-z="300" data-scale="3" id="basics-2">
+					<div class="slideContainer strut-slide-19">
+
+						<div class="componentContainer " style="top: 341px; left: 181px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Operations Are Local<br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-20" data-x="51595" data-y="12750" data-rotate-x="45" data-rotate-y="45" data-rotate-z="10" data-z="300" data-scale="3" id="basics-3">
+					<div class="slideContainer strut-slide-20">
+
+						<div class="componentContainer " style="top: 341px; left: 307px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									Integrity
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-21" data-x="54655" data-y="14790" data-rotate-x="45" data-rotate-y="45" data-rotate-z="10" data-z="250" data-scale="3" id="basics-4">
+					<div class="slideContainer strut-slide-21">
+
+						<div class="componentContainer " style="top: 51px; left: 114px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									File Status
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 201px; left: 93px;width: 806px; height: 442.46px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2.39, 2.39); -moz-transform: scale(2.39, 2.39); transform: scale(2.39, 2.39)">
+								<img src="img/file_status_lifecycle.2.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-22" data-x="58095" data-y="12025" data-rotate-x="45" data-rotate-y="45" data-rotate-z="10" data-z="250" data-scale="4" id="repo-0">
+					<div class="slideContainer strut-slide-22">
+
+						<div class="componentContainer " style="top: 298px; left: 166px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									Repository
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-23" data-x="61575" data-y="9630" data-rotate-x="45" data-z="250" data-scale="3" id="repo-1">
+					<div class="slideContainer strut-slide-23">
+
+						<div class="componentContainer " style="top: 54px; left: 93px;width: 839px; height: 661.03px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.82, 1.82); -moz-transform: scale(1.82, 1.82); transform: scale(1.82, 1.82)">
+								<img src="img/git_repositories.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-24" data-x="65320" data-y="7130" data-rotate-x="45" data-rotate-y="-45" data-z="250" data-scale="5" id="branch-0">
+					<div class="slideContainer strut-slide-24">
+
+						<div class="componentContainer " style="top: 298px; left: 219px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									Branches
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-25" data-x="61630" data-y="4225" data-rotate-x="45" data-rotate-y="-45" data-z="100" data-scale="3" id="branch-1">
+					<div class="slideContainer strut-slide-25">
+
+						<div class="componentContainer " style="top: 286px; left: 102px;width: 821px; height: 195.57px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.94, 1.94); -moz-transform: scale(1.94, 1.94); transform: scale(1.94, 1.94)">
+								<img src="img/linear_straight_line.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-26" data-x="58615" data-y="2305" data-rotate-x="45" data-rotate-y="-45" data-z="100" data-scale="3" id="branch-2">
+					<div class="slideContainer strut-slide-26">
+
+						<div class="componentContainer " style="top: 218px; left: 106px;width: 812px; height: 332.89px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.56, 1.56); -moz-transform: scale(1.56, 1.56); transform: scale(1.56, 1.56)">
+								<img src="img/branching_line.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-27" data-x="55790" data-y="4530" data-rotate-x="45" data-rotate-y="-45" data-scale="3" id="branch-3">
+					<div class="slideContainer strut-slide-27">
+
+						<div class="componentContainer " style="top: 239px; left: -63px;width: 1151px; height: 289.67px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.55, 0.55); -moz-transform: scale(0.55, 0.55); transform: scale(0.55, 0.55)">
+								<img src="img/git-barnch.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-28" data-x="72035" data-y="18970" data-rotate-z="45" data-z="200" data-scale="7" id="git-0">
+					<div class="slideContainer strut-slide-28">
+
+						<div class="componentContainer "
+						     style="top: 476px; left: 75px; -webkit-transform: rotate(-0.5rad)  ; -moz-transform: rotate(-0.5rad)  ; transform: rotate(-0.5rad)  ; width: 371px; height: 194.77px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.07, 0.07); -moz-transform: scale(0.07, 0.07); transform: scale(0.07, 0.07)">
+								<img src="img/logo/bitbucket-1200x630.png">
+							</div>
+						</div>
+
+						<div class="componentContainer "
+						     style="top: 531px; left: 569px; -webkit-transform: rotate(-0.5rad)  ; -moz-transform: rotate(-0.5rad)  ; transform: rotate(-0.5rad)  ; width: 381px; height: 135.45px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.4, 0.4); -moz-transform: scale(0.4, 0.4); transform: scale(0.4, 0.4)">
+								<img src="img/logo/GitLab_logo.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 87px; left: 15px;width: 263px; height: 263px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2.19, 2.19); -moz-transform: scale(2.19, 2.19); transform: scale(2.19, 2.19)">
+								<img src="img/logo/GitHub-Mark.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 65px; left: 258px;width: 749px; height: 307.09px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.75, 0.75); -moz-transform: scale(0.75, 0.75); transform: scale(0.75, 0.75)">
+								<img src="img/logo/GitHub_name.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-29" data-x="67420" data-y="23580" data-rotate-z="90" data-z="300" data-scale="3" id="git-1">
+					<div class="slideContainer strut-slide-29">
+						<div class="themedArea">
+							<h3 id="configuration">Configuration</h3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Config
+							</header>
+							<section class="terminal">
+								$&nbsp;git config --global user.name <strong><em>"User Name"</em></strong>
+								<br>$&nbsp;git config --global user.email <strong><em>"E-Mail"</em></strong>
+								<br>$&nbsp;git config --global core.editor <strong><em>"Vim"</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;git config --list
+								<br>
+								<br>$&nbsp;git config credential.helper store
+								<br>
+								<br>$&nbsp;<strong><em>[ssh-keygen]</em></strong>
+								<br>
+								<br>$&nbsp;cat ~/.ssh/id_rsa.pub
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-30" data-x="65155" data-y="25575" data-rotate-z="90" data-z="300" data-scale="3" id="git-2">
+					<div class="slideContainer strut-slide-30">
+						<div class="themedArea">
+							<h3>New Repository</h3>
+						</div>
+
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								From existing code
+
+							</header>
+							<section class="terminal">
+								$&nbsp;git init
+								<br>Initialized empty Git repository in
+								<br>$&nbsp;git remote add <a href="https://github.com/repo-path.git">https://github.com/repo-path.git</a>
+								<br>$&nbsp;git add --all
+								<br>$&nbsp;git commit -m
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="step future" data-state="strut-slide-31" data-x="62545" data-y="23840" data-rotate-z="90" data-z="300" data-scale="3" id="git-3">
+					<div class="slideContainer strut-slide-31">
+						<div class="themedArea">
+							<h3 id="new-repository">New Repository</h3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								From a remote repository
+							</header>
+							<section class="terminal">
+								<br>$&nbsp;git clone <a href="https://github.com/repo-path.git">https://github.com/repo-path.git</a>
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-32" data-x="59705" data-y="26005" data-rotate-z="90" data-z="300" data-scale="3" id="git-4">
+					<div class="slideContainer strut-slide-32">
+						<div class="themedArea">
+							<h3 id="change-repository">Change Repository</h3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Change repository
+							</header>
+							<section class="terminal">
+								<br>$&nbsp;git remote set-url <a href="https://github.com/repo-path.git">https://github.com/repo-path.git</a>
+								<br>$&nbsp;
+								<br>$&nbsp;git remote -v
+								<br>origin  https://github.com/repo-path.git (fetch)
+								<br>origin  https://github.com/repo-path.git (push)
+								<br>$&nbsp;
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-33" data-x="56785" data-y="23855" data-rotate-z="90" data-z="300" data-scale="3" id="git-5">
+
+					<div class="slideContainer strut-slide-33">
+						<div class="themedArea">
+							<h3 id="push-pull">Push / Pull</h3>
+						</div>
+
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Uploading / Downloading
+							</header>
+							<section class="terminal">
+								$&nbsp;git push -u origin master
+								<br>
+								<br>
+								<br>$&nbsp;git pull
+								<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-34" data-x="53795" data-y="25895" data-rotate-z="90" data-z="300" data-scale="3" id="git-6">
+					<div class="slideContainer strut-slide-34">
+						<div class="themedArea">
+							<h3 id="status">Status</h3>
+						</div>
+
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Status
+							</header>
+							<section class="terminal">
+								$&nbsp;git status
+								<br>On branch master
+								<br>Your branch is up-to-date with 'origin/master'.
+								<br>nothing to commit, working directory clean
+								<br>$&nbsp;
+								<br>$&nbsp;git log --since=2.weeks --graph<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-35" data-x="50875" data-y="23745" data-rotate-z="90" data-z="300" data-scale="3" id="git-graph">
+					<div class="slideContainer strut-slide-35">
+
+						<div class="componentContainer " style="top: 20px; left: 85px;width: 853px; height: 710.83px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.42, 1.42); -moz-transform: scale(1.42, 1.42); transform: scale(1.42, 1.42)">
+								<img src="img/log-graph.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-36" data-x="47675" data-y="25990" data-rotate-z="90" data-z="300" data-scale="3" id="git-7">
+					<div class="slideContainer strut-slide-36">
+						<div class="themedArea">
+							<h3 id="branches">Branches</h3>
+
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Branches
+							</header>
+							<section class="terminal">
+								$&nbsp;git branch <strong><em>branchname</em></strong>
+								<br>$&nbsp;git checkout <strong><em>branchname</em></strong>
+								<br>Switched to branch <strong><em>branchname</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;#OR
+								<br>$&nbsp;
+								<br>$&nbsp;git checkout -b <strong><em>branchname</em></strong>
+								<br>Switched to a new branch <strong><em>branchname</em></strong>
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-37" data-x="31880" data-y="36140" data-rotate-x="-45" data-z="250" data-scale="3" id="merge-0">
+					<div class="slideContainer strut-slide-37">
+						<div class="themedArea">
+							<h3>Merge</h3>
+
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Merge
+							</header>
+							<section class="terminal">
+								$&nbsp;<span class="typed-cursor">▮</span>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+
+							</section>
+						</div>
+
+						<div class="componentContainer " style="top: 475px; left: 158px;width: 708px; height: 265.25px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/history-abcd-1.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-38" data-x="27225" data-y="33240" data-rotate-x="-45" data-z="400" data-scale="3" id="merge-1"
+				     style="">
+					<div class="slideContainer strut-slide-38">
+						<div class="themedArea">
+							<h3>Merge</h3>
+
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Merge
+							</header>
+							<section class="terminal">
+								$&nbsp;git checkout -b cool-new-feature
+								<br>Switched to a new branch cool-new-feature
+								<br>$&nbsp;
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+								<br>
+								<br>
+
+							</section>
+						</div>
+
+						<div class="componentContainer " style="top: 450px; left: 196px;width: 632px; height: 283.06px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2, 2); -moz-transform: scale(2, 2); transform: scale(2, 2)">
+								<img src="img/history-abcd-cool-new-feature-1.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-39" data-x="24140" data-y="29845" data-rotate-x="-45" data-z="550" data-scale="3" id="merge-2"
+				     style="">
+					<div class="slideContainer strut-slide-39">
+
+						<div class="componentContainer " style="top: 205px; left: 12px;width: 1001px; height: 359.16px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.66, 1.66); -moz-transform: scale(1.66, 1.66); transform: scale(1.66, 1.66)">
+								<img src="img/history-abcd-cool-new-feature-e-f-1.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-40" data-x="19100" data-y="26895" data-rotate-x="-45" data-z="700" data-scale="3" id="merge-3">
+					<div class="slideContainer strut-slide-40">
+						<div class="themedArea">
+							<h3 id="merge">Merge</h3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Merge
+							</header>
+							<section class="terminal">
+								$&nbsp;git merge cool-feature master<span class="typed-cursor">▮</span>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+
+							</section>
+						</div>
+
+						<div class="componentContainer " style="top: 464px; left: 117px;width: 777px; height: 300.37px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.24, 1.24); -moz-transform: scale(1.24, 1.24); transform: scale(1.24, 1.24)">
+								<img src="img/history-abcd-cool-new-feature-e-f-merge-1.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-41" data-x="16205" data-y="22735" data-rotate-x="-45" data-z="850" data-scale="3" id="merge-4">
+					<div class="slideContainer strut-slide-41">
+
+						<div class="componentContainer " style="top: 118px; left: 80px;width: 864px; height: 531.53px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2.05, 2.05); -moz-transform: scale(2.05, 2.05); transform: scale(2.05, 2.05)">
+								<img src="img/screenshots/git-log-graph.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-42" data-x="11495" data-y="25360" data-rotate-x="-45" data-z="1000" data-scale="3" id="merge-5">
+					<div class="slideContainer strut-slide-42">
+
+						<div class="componentContainer " style="top: -9px; left: 12px;width: 1000px; height: 787.41px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.19, 1.19); -moz-transform: scale(1.19, 1.19); transform: scale(1.19, 1.19)">
+								<img src="img/screenshots/merge-conflict.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-42" data-x="6000" data-y="25360" data-rotate-x="-45" data-z="1300" data-scale="3" id="merge-6">
+					<div class="slideContainer strut-slide-42">
+
+						<div class="componentContainer " style="top: 30px; left: -110px;width: 1000px; height: 787.41px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.1, 1.1); -moz-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1)">
+								<img src="img/screenshots/git-conflicts-intellij.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-43" data-x="6460" data-y="29955" data-rotate-x="-45" data-z="500" data-scale="5" id="merge-gif">
+					<div class="slideContainer strut-slide-43">
+
+						<div class="componentContainer " style="top: 101px; left: 6px;width: 1013px; height: 566.65px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.58, 1.58); -moz-transform: scale(1.58, 1.58); transform: scale(1.58, 1.58)">
+								<img src="img/git-merge.gif">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-44" data-x="8670" data-y="35375" data-scale="3" id="merge-force">
+					<div class="slideContainer strut-slide-44">
+
+						<div class="componentContainer " style="top: 40px; left: 51px;width: 922px; height: 689.2px;">
+							<div class="transformContainer" style="-webkit-transform: scale(2.3, 2.3); -moz-transform: scale(2.3, 2.3); transform: scale(2.3, 2.3)">
+								<img src="img/push-force.jpg">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-45" data-x="15565" data-y="37065" data-scale="4" id="git-ignore">
+					<div class="slideContainer strut-slide-45">
+						<div class="themedArea">
+							<h2>Git Ignore</h2>
+						</div>
+
+						<pre>
+							<code class="lang-.gitignore">
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+							</code>
+						</pre>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-46" data-x="5885" data-y="41730" data-rotate-y="45" data-z="1000" data-scale="7" id="undo-0">
+					<div class="slideContainer strut-slide-46">
+
+						<div class="componentContainer " style="top: 298px; left: 244px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									Undoing
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-47" data-x="11360" data-y="46000" data-rotate-y="45" data-z="150" data-scale="3" id="undo-1">
+					<div class="slideContainer strut-slide-47">
+						<div class="themedArea">
+							<h3>Checkout</h3>
+						</div>
+
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Checkout
+							</header>
+							<section class="terminal">
+								$&nbsp;git checkout <strong><em>master</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;git checkout <strong><em>commit [file]</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+						<div class="componentContainer" style="top: 480px; left: 136px; width: 752.6462555157774px; height: 268.4438311339606px;">
+							<div class="transformContainer">
+								<img src="img/01.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-48" data-x="15430" data-y="41885" data-rotate-y="45" data-z="300" data-scale="3" id="revert-0">
+					<div class="slideContainer strut-slide-48">
+						<div class="themedArea">
+							<H3>revert</H3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Revert
+							</header>
+							<section class="terminal">
+								$&nbsp;git revert <strong><em>commit</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;git revert <strong><em>HEAD-2</em></strong>
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+						<div class="componentContainer" style="top: 535px; left: 84px; width: 836.1847763436905px; height: 139.5663995348685px;">
+							<div class="transformContainer">
+								<img src="img/03.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-49" data-x="20425" data-y="45435" data-rotate-y="45" data-z="450" data-scale="3" id="revert-1">
+					<div class="slideContainer strut-slide-49">
+
+						<div class="componentContainer" style="top: 4px; left: 97px; width: 831.4198105843235px; height: 759.7804822451402px;">
+							<div class="transformContainer">
+								<img src="img/06-1.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-50" data-x="23810" data-y="41720" data-rotate-y="45" data-z="600" data-scale="3" id="revert-2">
+					<div class="slideContainer strut-slide-50">
+
+						<div class="componentContainer" style="top: 91px; left: 0px; width: 1022.469421629134px; height: 675.7819153075147px;">
+							<div class="transformContainer">
+								<img src="img/06-2.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+						<div class="componentContainer" style="top: 4px; left: 3px; width: 267.59507717765916px; height: 244.53773436259388px;">
+							<div class="transformContainer">
+								<img src="img/06-1.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-51" data-x="27745" data-y="45145" data-rotate-y="45" data-z="750" data-scale="3" id="reset-0">
+					<div class="slideContainer strut-slide-51">
+						<div class="themedArea">
+							<h3>reset</h3>
+						</div>
+
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Reset
+							</header>
+							<section class="terminal">
+								$&nbsp;git reset <strong><em>[--hard] [file | commit]</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-52" data-x="32045" data-y="41350" data-rotate-y="45" data-z="900" data-scale="3" id="reset-1">
+					<div class="slideContainer strut-slide-52">
+
+						<div class="componentContainer" style="top: 9px; left: 9px; width: 1005.5174851790819px; height: 750.3861829694641px;">
+							<div class="transformContainer">
+								<img src="img/02-1.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-53" data-x="35910" data-y="45280" data-rotate-y="45" data-z="1050" data-scale="3" id="reset-2">
+					<div class="slideContainer strut-slide-53">
+
+						<div class="componentContainer" style="top: 5px; left: 4px; width: 275.4990179507963px; height: 207.126998897314px;">
+							<div class="transformContainer">
+								<img src="img/02-1.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+						<div class="componentContainer" style="top: 2px; left: 192px; width: 786.920665841144px; height: 761.5361282333652px;">
+							<div class="transformContainer">
+								<img src="img/02-2.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-54" data-x="39650" data-y="41870" data-rotate-y="45" data-z="1200" data-scale="3" id="clean">
+					<div class="slideContainer strut-slide-54">
+						<div class="themedArea">
+							<h3>clean</h3>
+						</div>
+						<div class="terminal-window">
+							<header>
+								<div class="button green"></div>
+								<div class="button yellow"></div>
+								<div class="button red"></div>
+								Clean
+							</header>
+							<section class="terminal">
+								$&nbsp;git clean <strong><em>-n</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;git clean <strong><em>-i[d | x]</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;git clean <strong><em>-f[d | x]</em></strong>
+								<br>$&nbsp;
+								<br>$&nbsp;<span class="typed-cursor">▮</span>
+
+							</section>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-55" data-x="49875" data-y="35360" data-rotate-x="-45" data-z="500" data-scale="7" id="client-0">
+					<div class="slideContainer strut-slide-55">
+
+						<div class="componentContainer " style="top: 298px; left: 178px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-144">
+									Git Clients
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-56" data-x="48715" data-y="42070" data-rotate-x="-45" data-z="650" data-scale="3" id="client-1">
+					<div class="slideContainer strut-slide-56">
+
+						<div class="componentContainer " style="top: 113px; left: 300px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<img src="img/screenshots/sourcetree.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 19px; left: 7px;width: 451px; height: 79.18px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.46, 0.46); -moz-transform: scale(0.46, 0.46); transform: scale(0.46, 0.46)">
+								<img src="img/logo/sourcetree_rgb_slate.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 467px; left: 78px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									<ul>
+										<li>OS X</li>
+										<li>Windows<br></li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-57" data-x="54040" data-y="46310" data-rotate-x="-45" data-z="800" data-scale="3" id="client-2">
+					<div class="slideContainer strut-slide-57">
+
+						<div class="componentContainer " style="top: 35px; left: 41px;width: 446px; height: 73.82px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1.54, 1.54); -moz-transform: scale(1.54, 1.54); transform: scale(1.54, 1.54)">
+								<img src="img/logo/desktop-logo.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 106px; left: 214px;width: 834px; height: 516.05px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.72, 0.72); -moz-transform: scale(0.72, 0.72); transform: scale(0.72, 0.72)">
+								<img src="img/screenshots/github-desktop.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 520px; left: 69px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									<ul>
+										<li>OS X<br></li>
+										<li>Windows</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-58" data-x="58875" data-y="40890" data-rotate-x="-45" data-z="600" data-scale="3" id="client-3">
+					<div class="slideContainer strut-slide-58">
+
+						<div class="componentContainer " style="top: 130px; left: 287px;width: 730px; height: 484.5px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.38, 0.38); -moz-transform: scale(0.38, 0.38); transform: scale(0.38, 0.38)">
+								<img src="img/screenshots/git-project.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 513px; left: 63px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									<ul>
+										<li>OS X<br></li>
+										<li>Linux</li>
+										<li>Windows</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: -2px; left: -2px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<img src="img/logo/smart-git.png">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-59" data-x="62015" data-y="35545" data-rotate-x="-45" data-z="400" data-scale="3" id="client-4">
+					<div class="slideContainer strut-slide-59">
+
+						<div class="componentContainer " style="top: 147px; left: 280px;width: 720px; height: 450px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.5, 0.5); -moz-transform: scale(0.5, 0.5); transform: scale(0.5, 0.5)">
+								<img src="img/screenshots/1-main-view.png">
+							</div>
+						</div>
+
+						<div class="componentContainer " style="top: 513px; left: 63px;">
+							<div class="transformContainer" style="-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)">
+								<div class="text-72">
+									<ul>
+										<li>OS X<br></li>
+										<li>Linux</li>
+										<li>Windows</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="componentContainer" style="top: 23px; left: 34px; width: 570.8779295781519px; height: 131.40963661987647px;">
+							<div class="transformContainer">
+								<img src="img/logo/gitkraken.svg" style="width: 100%; height: 100%">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="step past" data-state="strut-slide-60" data-x="72270" data-y="41795" data-rotate-x="45" data-rotate-z="90" data-scale="8" id="fire">
+					<div class="slideContainer strut-slide-60">
+
+						<div class="componentContainer " style="top: 24px; left: 3px;width: 1018px; height: 719.78px;">
+							<div class="transformContainer" style="-webkit-transform: scale(0.11, 0.11); -moz-transform: scale(0.11, 0.11); transform: scale(0.11, 0.11)">
+								<img src="img/in_case_of_fireirrtb.jpg">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="overview" class="step present active" data-state="strut-slide-overview" data-x="39000" data-y="25000" data-scale="10">
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
